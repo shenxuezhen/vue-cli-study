@@ -12,7 +12,15 @@ module.exports={
 	module:{
 		rules:[
 		//匹配以.js为结尾的文件，使用babel-loader将es6转成es5，排除mode_modules下的文件
-		{test:/\.js$/,use:'babel-loader',exclude:/node+modules/}
+		{
+			test:/\.js$/,
+			use:'babel-loader',
+			exclude:/node_modules/
+		},
+		{
+			test:/\.css$/,
+			use:['style-loader','css-loader']
+		},
 		]
 	}
 }  
