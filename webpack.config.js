@@ -1,6 +1,7 @@
 //webpack必须采用common.js写法
 //以当前路径处理成一个相对路径
 let path=require('path');
+let HtmlWebpackPlugin=require('html-webpack-plugin');
 path.resolve();
 module.exports={
 	entry:'./src/main.js',
@@ -21,6 +22,20 @@ module.exports={
 			test:/\.css$/,
 			use:['style-loader','css-loader']
 		},
+		{
+			test:/\.less$/,
+			use:['style-loader','css-loader','less-loader']
+		},
+		{
+			test:/\.(png|jpg|gif)$/,
+			use:'url-loader?limit=1024'
+		}
 		]
-	}
+	},
+	plugins:[
+		new HtmlWebpackPlugin({
+			template:'./src/index.html',//打包的文件路径
+			filename:'login.html'//产出的文件名字
+		})
+	]
 }  

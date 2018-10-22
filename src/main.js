@@ -1,11 +1,8 @@
 import './index.css';
+import './style.less';
 import './a.js';
-import 'jQuery';
-promise.then(function(val){
-	return new Promise(function(res,rej){
-		console.log(1111);
-	})
-})
-.then(function(){
-	console.log(2222222);
-})
+import $ from 'jQuery';
+import pageImge from './images/timg.jpg';
+let img=new Image();
+img.src= pageImge;
+$('body').append(img);
