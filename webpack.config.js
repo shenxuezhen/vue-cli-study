@@ -29,6 +29,10 @@ module.exports={
 		{
 			test:/\.(png|jpg|gif)$/,
 			use:'url-loader?limit=1024'
+		},
+		{
+			test:/\.vue/,
+			use:'vue-loader'
 		}
 		]
 	},

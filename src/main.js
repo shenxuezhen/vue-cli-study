@@ -1,8 +1,7 @@
-import './index.css';
-import './style.less';
-import './a.js';
+import Vue from 'vue/dist/vue.js';
 import $ from 'jQuery';
-import pageImge from './images/timg.jpg';
-let img=new Image();
-img.src= pageImge;
-$('body').append(img);
+import App from './App.vue';
+console.log(App);
+new Vue({
+	render:(h)=>h(App)
+}).$mount('#app')
