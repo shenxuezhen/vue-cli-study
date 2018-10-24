@@ -38,8 +38,8 @@ module.exports={
 	},
 	plugins:[
 		new HtmlWebpackPlugin({
-			template:'./src/index.html',//打包的文件路径
-			filename:'login.html'//产出的文件名字
+			template:'./src/index.html'//打包的文件路径
+			//filename:'login.html'//产出的文件名字
 		})
 	]
 }  
